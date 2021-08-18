@@ -1,0 +1,201 @@
+$text-color-dark: #484847;
+
+@mixin svg-position($scale: 1) {
+    position: absolute;
+    transform: scale($scale) translate(-50%, -50%);
+    z-index: 2;
+}
+@keyframes rotate-360 {
+    from {
+        transform: rotate(0deg) scale(var(--scale-start));
+    }
+    to {
+        transform: rotate(360deg) scale(var(--scale-start));
+    }
+}
+@keyframes to-floating-top {
+    0%,
+    100% {
+        top: (var(--top-start));
+    }
+    50% {
+        top: (var(--top-end));
+    }
+}
+@keyframes to-floating-left {
+    0%,
+    100% {
+        left: (var(--left-start));
+    }
+    50% {
+        left: (var(--left-end));
+    }
+}
+@keyframes opacity-0 {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@keyframes scale-animate {
+    0%,
+    100% {
+        transform: scale(var(--scale-start));
+    }
+    50% {
+        transform: scale(var(--scale-end));
+    }
+}
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    background: url("/src/initial_bg.png") no-repeat center;
+    background-size: 100% 100%;;
+
+    .logo-school {
+        width: 190px;
+        height: 110px;
+        object-fit: cover;
+        margin-left: 3rem;
+        margin-top: 3rem;
+    }
+    .img-initial {
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        right: -30px;
+        top: -140px;
+        border-radius: 50%;
+        object-fit: cover;
+        z-index: 2;
+        transform: rotateZ(-15deg) scale(1.1);
+        background: url("/src/Imagens/inicial.jpg") right;
+        background-size: cover;
+        transition: 1s ease-in-out;
+        &:hover {
+            transform: rotateZ(-15deg) scale(1.15);
+        }
+    }
+    #span-circle {
+        position: absolute;
+        width: 580px;
+        height: 580px;
+        right: -60px;
+        top: -160px;
+        background-color: #89dfe6;
+        border-radius: 50%;
+        z-index: 1;
+    }
+    // SVG - Atomo
+    .svg-atomo-1 {
+        --scale-start: 0.9;
+        @include svg-position();
+        left: 41%;
+        top: 10%;
+        animation: rotate-360 13s infinite linear;
+    }
+    .svg-atomo-2 {
+        --scale-start: 0.8;
+        @include svg-position();
+        left: 46%;
+        top: 70%;
+        animation: rotate-360 18s infinite linear reverse;
+    }
+    // SVG - Pen
+    .svg-pen-1 {
+        --top-start: 17%;
+        --top-end: 6%;
+        @include svg-position(0.8);
+        left: 55%;
+        top: var(--top-start);
+        animation: to-floating-top 5s infinite ease-in-out;
+    }
+    .svg-pen-2 {
+        --top-start: 74%;
+        --top-end: 64%;
+        @include svg-position(0.8);
+        left: 4%;
+        top: var(--top-start);
+        transform: rotateY(180deg) rotateZ(-10deg);
+        animation: to-floating-top 7s infinite ease-in-out;
+    }
+    // SVG - Division
+    .svg-division-1 {
+        @include svg-position(0.7);
+        left: 3%;
+        top: 40%;
+        animation: opacity-0 7s infinite ease-in-out;
+    }
+    .svg-division-2 {
+        @include svg-position(0.8);
+        left: 70%;
+        top: 65%;
+        animation: opacity-0 10s infinite ease-in-out;
+    }
+    // SVG - Multiple
+    .svg-multiple-1 {
+        --left-start: 13%;
+        --left-end: 20%;
+        @include svg-position(0.6);
+        left: var(--left-start);
+        top: 5%;
+        animation: to-floating-left 5s infinite ease-in-out;
+    }
+    .svg-multiple-2 {
+        --left-start: 56%;
+        --left-end: 50%;
+        @include svg-position(0.6);
+        left: var(--left-start);
+        top: 40%;
+        animation: to-floating-left 5s infinite ease-in-out;
+    }
+    // SVG - Bag
+    .svg-bag-1 {
+        --scale-start: 0.6;
+        --scale-end: 0.8;
+        @include svg-position(var(--scale-start));
+        right: 0;
+        top: 57%;
+        animation: scale-animate 6s infinite ease-in-out;
+    }
+
+    .div-texts {
+        margin-top: 4rem;
+        margin-left: 9rem;
+        width: 25%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        h1 {
+            font-weight: 400;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        p {
+            margin-bottom: 0.5rem;
+        }
+        button {
+            align-self: center;
+            margin-top: 1rem;
+            padding: 15px 25px;
+            border-radius: 30px;
+            background-color: #f8f47c;
+            border: none;
+            font-size: 1.2rem;
+            box-shadow: 5px 5px 10px $text-color-dark;
+            transition: 0.4s;
+            cursor: pointer;
+            color: $text-color-dark;
+
+            &:hover {
+                box-shadow: 0px 0px 3px $text-color-dark;
+            }
+        }
+    }
+}

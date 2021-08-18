@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap");
+@-webkit-keyframes rotate-360 {
+  from {
+    -webkit-transform: rotate(0deg) scale(var(--scale-start));
+            transform: rotate(0deg) scale(var(--scale-start));
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(var(--scale-start));
+            transform: rotate(360deg) scale(var(--scale-start));
+  }
+}
+@keyframes rotate-360 {
+  from {
+    -webkit-transform: rotate(0deg) scale(var(--scale-start));
+            transform: rotate(0deg) scale(var(--scale-start));
+  }
+  to {
+    -webkit-transform: rotate(360deg) scale(var(--scale-start));
+            transform: rotate(360deg) scale(var(--scale-start));
+  }
+}
+
+@-webkit-keyframes to-floating-top {
+  0%,
+  100% {
+    top: var(--top-start);
+  }
+  50% {
+    top: var(--top-end);
+  }
+}
+
+@keyframes to-floating-top {
+  0%,
+  100% {
+    top: var(--top-start);
+  }
+  50% {
+    top: var(--top-end);
+  }
+}
+
+@-webkit-keyframes to-floating-left {
+  0%,
+  100% {
+    left: var(--left-start);
+  }
+  50% {
+    left: var(--left-end);
+  }
+}
+
+@keyframes to-floating-left {
+  0%,
+  100% {
+    left: var(--left-start);
+  }
+  50% {
+    left: var(--left-end);
+  }
+}
+
+@-webkit-keyframes opacity-0 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-0 {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes scale-animate {
+  0%,
+  100% {
+    -webkit-transform: scale(var(--scale-start));
+            transform: scale(var(--scale-start));
+  }
+  50% {
+    -webkit-transform: scale(var(--scale-end));
+            transform: scale(var(--scale-end));
+  }
+}
+
+@keyframes scale-animate {
+  0%,
+  100% {
+    -webkit-transform: scale(var(--scale-start));
+            transform: scale(var(--scale-start));
+  }
+  50% {
+    -webkit-transform: scale(var(--scale-end));
+            transform: scale(var(--scale-end));
+  }
+}
+
+.banner {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: url("/src/initial_bg.png") no-repeat center;
+  background-size: 100% 100%;
+}
+
+.banner .logo-school {
+  width: 190px;
+  height: 110px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+
+.banner .img-initial {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  right: -30px;
+  top: -140px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 2;
+  -webkit-transform: rotateZ(-15deg) scale(1.1);
+          transform: rotateZ(-15deg) scale(1.1);
+  background: url("/src/Imagens/inicial.jpg") right;
+  background-size: cover;
+  -webkit-transition: 1s ease-in-out;
+  transition: 1s ease-in-out;
+}
+
+.banner .img-initial:hover {
+  -webkit-transform: rotateZ(-15deg) scale(1.15);
+          transform: rotateZ(-15deg) scale(1.15);
+}
+
+.banner #span-circle {
+  position: absolute;
+  width: 580px;
+  height: 580px;
+  right: -60px;
+  top: -160px;
+  background-color: #89dfe6;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.banner .svg-atomo-1 {
+  --scale-start: 0.9;
+  position: absolute;
+  -webkit-transform: scale(1) translate(-50%, -50%);
+          transform: scale(1) translate(-50%, -50%);
+  z-index: 2;
+  left: 41%;
+  top: 10%;
+  -webkit-animation: rotate-360 13s infinite linear;
+          animation: rotate-360 13s infinite linear;
+}
+
+.banner .svg-atomo-2 {
+  --scale-start: 0.8;
+  position: absolute;
+  -webkit-transform: scale(1) translate(-50%, -50%);
+          transform: scale(1) translate(-50%, -50%);
+  z-index: 2;
+  left: 46%;
+  top: 70%;
+  animation: rotate-360 18s infinite linear reverse;
+}
+
+.banner .svg-pen-1 {
+  --top-start: 17%;
+  --top-end: 6%;
+  position: absolute;
+  -webkit-transform: scale(0.8) translate(-50%, -50%);
+          transform: scale(0.8) translate(-50%, -50%);
+  z-index: 2;
+  left: 55%;
+  top: var(--top-start);
+  -webkit-animation: to-floating-top 5s infinite ease-in-out;
+          animation: to-floating-top 5s infinite ease-in-out;
+}
+
+.banner .svg-pen-2 {
+  --top-start: 74%;
+  --top-end: 64%;
+  position: absolute;
+  -webkit-transform: scale(0.8) translate(-50%, -50%);
+          transform: scale(0.8) translate(-50%, -50%);
+  z-index: 2;
+  left: 4%;
+  top: var(--top-start);
+  -webkit-transform: rotateY(180deg) rotateZ(-10deg);
+          transform: rotateY(180deg) rotateZ(-10deg);
+  -webkit-animation: to-floating-top 7s infinite ease-in-out;
+          animation: to-floating-top 7s infinite ease-in-out;
+}
+
+.banner .svg-division-1 {
+  position: absolute;
+  -webkit-transform: scale(0.7) translate(-50%, -50%);
+          transform: scale(0.7) translate(-50%, -50%);
+  z-index: 2;
+  left: 3%;
+  top: 40%;
+  -webkit-animation: opacity-0 7s infinite ease-in-out;
+          animation: opacity-0 7s infinite ease-in-out;
+}
+
+.banner .svg-division-2 {
+  position: absolute;
+  -webkit-transform: scale(0.8) translate(-50%, -50%);
+          transform: scale(0.8) translate(-50%, -50%);
+  z-index: 2;
+  left: 70%;
+  top: 65%;
+  -webkit-animation: opacity-0 10s infinite ease-in-out;
+          animation: opacity-0 10s infinite ease-in-out;
+}
+
+.banner .svg-multiple-1 {
+  --left-start: 13%;
+  --left-end: 20%;
+  position: absolute;
+  -webkit-transform: scale(0.6) translate(-50%, -50%);
+          transform: scale(0.6) translate(-50%, -50%);
+  z-index: 2;
+  left: var(--left-start);
+  top: 5%;
+  -webkit-animation: to-floating-left 5s infinite ease-in-out;
+          animation: to-floating-left 5s infinite ease-in-out;
+}
+
+.banner .svg-multiple-2 {
+  --left-start: 56%;
+  --left-end: 50%;
+  position: absolute;
+  -webkit-transform: scale(0.6) translate(-50%, -50%);
+          transform: scale(0.6) translate(-50%, -50%);
+  z-index: 2;
+  left: var(--left-start);
+  top: 40%;
+  -webkit-animation: to-floating-left 5s infinite ease-in-out;
+          animation: to-floating-left 5s infinite ease-in-out;
+}
+
+.banner .svg-bag-1 {
+  --scale-start: 0.6;
+  --scale-end: 0.8;
+  position: absolute;
+  -webkit-transform: scale(var(--scale-start)) translate(-50%, -50%);
+          transform: scale(var(--scale-start)) translate(-50%, -50%);
+  z-index: 2;
+  right: 0;
+  top: 57%;
+  -webkit-animation: scale-animate 6s infinite ease-in-out;
+          animation: scale-animate 6s infinite ease-in-out;
+}
+
+.banner .div-texts {
+  margin-top: 4rem;
+  margin-left: 9rem;
+  width: 25%;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner .div-texts h1 {
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.banner .div-texts p {
+  margin-bottom: 0.5rem;
+}
+
+.banner .div-texts button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 1rem;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background-color: #f8f47c;
+  border: none;
+  font-size: 1.2rem;
+  -webkit-box-shadow: 5px 5px 10px #484847;
+          box-shadow: 5px 5px 10px #484847;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+  color: #484847;
+}
+
+.banner .div-texts button:hover {
+  -webkit-box-shadow: 0px 0px 3px #484847;
+          box-shadow: 0px 0px 3px #484847;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Roboto;
+}
+/*# sourceMappingURL=main.css.map */
