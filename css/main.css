@@ -420,7 +420,235 @@
 
 #methodology .card-pride .school-description p {
   margin: 1rem 0;
-  width: 95%;
+  width: 90%;
+  opacity: 0.9;
+}
+
+#learning-progress {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10rem;
+  color: #484847;
+  overflow: hidden;
+}
+
+#learning-progress:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 80%;
+  width: 3px;
+  background-color: #d1d1d1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 10px;
+}
+
+#learning-progress:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  left: 50%;
+  bottom: 3rem;
+  background-color: #fafafa;
+  -webkit-transform: skewX(-40deg);
+          transform: skewX(-40deg);
+  z-index: -1;
+}
+
+#learning-progress .div-left,
+#learning-progress .div-right {
+  position: relative;
+  width: 50%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (350px)[5];
+      grid-template-rows: repeat(5, 350px);
+}
+
+#learning-progress .figure-left:before {
+  left: 100%;
+}
+
+#learning-progress .figure-left::after {
+  left: 125%;
+}
+
+#learning-progress .figure-right:before {
+  left: 0%;
+}
+
+#learning-progress .figure-right::after {
+  left: -25%;
+}
+
+#learning-progress .card h3 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+#learning-progress .card p {
+  width: 80%;
+}
+
+#learning-progress .card figure {
+  position: relative;
+  width: 80%;
+}
+
+#learning-progress .card figure:before {
+  content: "";
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 50%;
+  top: 50%;
+  height: 1px;
+  background-color: #d1d1d1;
+}
+
+#learning-progress .card figure::after {
+  content: "";
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  background-color: #d1d1d1;
+}
+
+#learning-progress .card figure img {
+  width: 100%;
+  min-width: 100%;
+  height: 55%;
+  min-height: 350px;
+  border-radius: 10px;
+  -webkit-box-shadow: 1px 1px 5px #ccc;
+          box-shadow: 1px 1px 5px #ccc;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#learning-progress .card figure button {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #fbdb6e;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 3px 10px #484847;
+          box-shadow: 3px 3px 10px #484847;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+#learning-progress .card figure button:hover {
+  -webkit-box-shadow: 1px 1px 5px #484847;
+          box-shadow: 1px 1px 5px #484847;
+}
+
+#learning-progress .card-left {
+  margin-left: 3rem;
+}
+
+#learning-progress .card-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 3rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+#learning-progress .card-right h3 {
+  width: 80%;
+}
+
+#learning-progress .infantil-card {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+}
+
+#learning-progress .fundamental-1-card {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-row: 2 / 4;
+}
+
+#learning-progress .fundamental-2-card {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  grid-row: 3 / 6;
+}
+
+#learning-progress .medio-card {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4 / 6;
+}
+
+#learning-progress .white-space {
+  position: relative;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#learning-progress .white-space h1 {
+  width: 65%;
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+#learning-progress .white-space .balls-1 {
+  position: absolute;
+  right: 0;
+  bottom: 5rem;
+  width: 175px;
+}
+
+#learning-progress .white-space .balls-2 {
+  position: absolute;
+  right: 1rem;
+  bottom: 5rem;
+  -webkit-transform: rotateZ(90deg) scale(0.8);
+          transform: rotateZ(90deg) scale(0.8);
+}
+
+#learning-progress .slatted-circle-1 {
+  position: absolute;
+  left: -41rem;
+  top: 14rem;
+}
+
+#learning-progress .slatted-circle-2 {
+  position: absolute;
+  left: -17rem;
+  width: 500px;
+  bottom: 0;
 }
 
 * {
