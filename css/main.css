@@ -104,7 +104,7 @@
   }
 }
 
-.banner {
+#banner {
   position: relative;
   min-height: 100vh;
   width: 100%;
@@ -113,7 +113,7 @@
   background-size: 100% 100%;
 }
 
-.banner .logo-school {
+#banner .logo-school {
   width: 190px;
   height: 110px;
   -o-object-fit: cover;
@@ -122,7 +122,7 @@
   margin-top: 3rem;
 }
 
-.banner .img-initial {
+#banner .img-initial {
   position: absolute;
   width: 500px;
   height: 500px;
@@ -140,12 +140,12 @@
   transition: 1s ease-in-out;
 }
 
-.banner .img-initial:hover {
+#banner .img-initial:hover {
   -webkit-transform: rotateZ(-15deg) scale(1.15);
           transform: rotateZ(-15deg) scale(1.15);
 }
 
-.banner #span-circle {
+#banner #span-circle {
   position: absolute;
   width: 580px;
   height: 580px;
@@ -156,7 +156,7 @@
   z-index: 1;
 }
 
-.banner .svg-atomo-1 {
+#banner .svg-atomo-1 {
   --scale-start: 0.9;
   position: absolute;
   -webkit-transform: scale(1) translate(-50%, -50%);
@@ -168,7 +168,7 @@
           animation: rotate-360 13s infinite linear;
 }
 
-.banner .svg-atomo-2 {
+#banner .svg-atomo-2 {
   --scale-start: 0.8;
   position: absolute;
   -webkit-transform: scale(1) translate(-50%, -50%);
@@ -179,7 +179,7 @@
   animation: rotate-360 18s infinite linear reverse;
 }
 
-.banner .svg-pen-1 {
+#banner .svg-pen-1 {
   --top-start: 17%;
   --top-end: 6%;
   position: absolute;
@@ -192,7 +192,7 @@
           animation: to-floating-top 5s infinite ease-in-out;
 }
 
-.banner .svg-pen-2 {
+#banner .svg-pen-2 {
   --top-start: 74%;
   --top-end: 64%;
   position: absolute;
@@ -207,7 +207,7 @@
           animation: to-floating-top 7s infinite ease-in-out;
 }
 
-.banner .svg-division-1 {
+#banner .svg-division-1 {
   position: absolute;
   -webkit-transform: scale(0.7) translate(-50%, -50%);
           transform: scale(0.7) translate(-50%, -50%);
@@ -218,7 +218,7 @@
           animation: opacity-0 7s infinite ease-in-out;
 }
 
-.banner .svg-division-2 {
+#banner .svg-division-2 {
   position: absolute;
   -webkit-transform: scale(0.8) translate(-50%, -50%);
           transform: scale(0.8) translate(-50%, -50%);
@@ -229,7 +229,7 @@
           animation: opacity-0 10s infinite ease-in-out;
 }
 
-.banner .svg-multiple-1 {
+#banner .svg-multiple-1 {
   --left-start: 13%;
   --left-end: 20%;
   position: absolute;
@@ -242,7 +242,7 @@
           animation: to-floating-left 5s infinite ease-in-out;
 }
 
-.banner .svg-multiple-2 {
+#banner .svg-multiple-2 {
   --left-start: 56%;
   --left-end: 50%;
   position: absolute;
@@ -255,7 +255,7 @@
           animation: to-floating-left 5s infinite ease-in-out;
 }
 
-.banner .svg-bag-1 {
+#banner .svg-bag-1 {
   --scale-start: 0.6;
   --scale-end: 0.8;
   position: absolute;
@@ -268,7 +268,7 @@
           animation: scale-animate 6s infinite ease-in-out;
 }
 
-.banner .div-texts {
+#banner .div-texts {
   margin-top: 4rem;
   margin-left: 9rem;
   width: 25%;
@@ -282,17 +282,17 @@
           flex-direction: column;
 }
 
-.banner .div-texts h1 {
+#banner .div-texts h1 {
   font-weight: 400;
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.banner .div-texts p {
+#banner .div-texts p {
   margin-bottom: 0.5rem;
 }
 
-.banner .div-texts button {
+#banner .div-texts button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -310,9 +310,117 @@
   color: #484847;
 }
 
-.banner .div-texts button:hover {
+#banner .div-texts button:hover {
   -webkit-box-shadow: 0px 0px 3px #484847;
           box-shadow: 0px 0px 3px #484847;
+}
+
+#methodology {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #484847;
+}
+
+#methodology .title {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+#methodology .our-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 4rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#methodology .our-skills .card-skill {
+  width: 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#methodology .our-skills .card-skill img {
+  width: 30%;
+}
+
+#methodology .our-skills .card-skill h3 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0.7rem 0;
+}
+
+#methodology .our-skills .card-skill p {
+  text-align: center;
+  width: 75%;
+  opacity: 0.9;
+}
+
+#methodology .card-pride {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 15rem;
+  margin-top: 4rem;
+}
+
+#methodology .card-pride .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 33%;
+}
+
+#methodology .card-pride .icon h1 {
+  font-size: 3vw;
+  margin-top: 1rem;
+  font-weight: 400;
+}
+
+#methodology .card-pride .icon img {
+  width: 30%;
+}
+
+#methodology .card-pride .school-description {
+  width: 67%;
+}
+
+#methodology .card-pride .school-description h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+#methodology .card-pride .school-description p {
+  margin: 1rem 0;
+  width: 95%;
 }
 
 * {
