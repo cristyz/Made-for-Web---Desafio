@@ -127,7 +127,7 @@ $line-color: #d1d1d1;
         flex-direction: column;
         margin-right: 3rem;
         align-items: flex-end;
-        h3{
+        h3 {
             width: 80%;
         }
     }
@@ -150,31 +150,31 @@ $line-color: #d1d1d1;
         height: 100%;
         display: flex;
         justify-content: center;
-        h1{
+        h1 {
             width: 65%;
             font-weight: 400;
             font-size: 2rem;
         }
-        .balls-1{
+        .balls-1 {
             position: absolute;
             right: 0;
             bottom: 5rem;
             width: 175px;
         }
-        .balls-2{
+        .balls-2 {
             position: absolute;
             right: 1rem;
             bottom: 5rem;
-            transform: rotateZ(90deg) scale(.8) ;
+            transform: rotateZ(90deg) scale(0.8);
         }
     }
 
-    .slatted-circle-1{
+    .slatted-circle-1 {
         position: absolute;
         left: -41rem;
         top: 14rem;
     }
-    .slatted-circle-2{
+    .slatted-circle-2 {
         position: absolute;
         left: -17rem;
         width: 500px;

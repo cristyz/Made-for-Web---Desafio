@@ -731,7 +731,7 @@
 #galery .grid-images .div-svgs {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 170%;
   left: 0;
   top: -200px;
   overflow: hidden;
@@ -775,12 +775,12 @@
 
 #galery .grid-images .div-svgs .line-yellow-2 {
   position: absolute;
-  right: -50rem;
+  left: 35rem;
   top: 70rem;
   z-index: -1;
   width: 100%;
-  -webkit-transform: scaleX(1.4) rotateZ(-160deg);
-          transform: scaleX(1.4) rotateZ(-160deg);
+  -webkit-transform: scaleX(1.4) rotateZ(-140deg);
+          transform: scaleX(1.4) rotateZ(-140deg);
 }
 
 #galery .grid-images .div-svgs .line-blue {
@@ -921,8 +921,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 90%;
-  margin-left: 0rem;
+  max-width: 100%;
   -ms-flex-item-align: end;
       align-self: flex-end;
   overflow-x: scroll;
@@ -964,6 +963,10 @@
      object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
+}
+
+#team .container-peoples .school-team .card:nth-child(1) {
+  margin-left: 10rem;
 }
 
 #team .container-depositions {
@@ -1022,6 +1025,361 @@
 
 #team .container-depositions .card figure span {
   margin-top: 1rem;
+}
+
+#contact {
+  min-height: 250vh;
+  padding-top: 7rem;
+  color: #707070;
+  position: relative;
+}
+
+#contact .more-about {
+  width: 100%;
+  height: 125vh;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#contact .more-about .contact-texts {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .more-about .contact-texts .texts {
+  width: 100%;
+  margin-top: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+#contact .more-about .contact-texts .texts h1,
+#contact .more-about .contact-texts .texts p {
+  width: 50%;
+  font-weight: 400;
+}
+
+#contact .more-about .contact-texts .texts h1 {
+  font-size: 2.5rem;
+}
+
+#contact .more-about .contact-texts .texts p {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+#contact .more-about .contact-texts img {
+  width: 40vw;
+  z-index: 1;
+}
+
+#contact .more-about .contact-form {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .more-about .contact-form form {
+  width: 80%;
+  height: 90%;
+  padding: 1rem 2rem;
+  border: 1px solid #707070;
+  -webkit-box-shadow: 4px 8px 10px #7070707c;
+          box-shadow: 4px 8px 10px #7070707c;
+  border-radius: 30px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#contact .more-about .contact-form form span {
+  font-size: 0.8rem;
+}
+
+#contact .more-about .contact-form form .input-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 1.5rem 0;
+}
+
+#contact .more-about .contact-form form .input-field label {
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+#contact .more-about .contact-form form .input-field input {
+  border: none;
+  border-bottom: 1px solid #707070;
+  padding: 0.5rem 0;
+  background-color: inherit;
+  outline: none;
+  font-size: 1rem;
+  color: inherit;
+}
+
+#contact .more-about .contact-form form .input-field input::-webkit-input-placeholder {
+  font-size: 1rem;
+}
+
+#contact .more-about .contact-form form .input-field input:-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+#contact .more-about .contact-form form .input-field input::-ms-input-placeholder {
+  font-size: 1rem;
+}
+
+#contact .more-about .contact-form form .input-field input::placeholder {
+  font-size: 1rem;
+}
+
+#contact .more-about .contact-form form .about-your-children {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 2.5rem 0;
+  padding: 1rem 2rem;
+  background-color: #fafafa;
+  border-radius: 20px;
+}
+
+#contact .more-about .contact-form form .about-your-children h3 {
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+#contact .more-about .contact-form form .about-your-children .current-state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#contact .more-about .contact-form form .about-your-children .current-state .input-field-state {
+  width: 50%;
+}
+
+#contact .more-about .contact-form form .about-your-children .current-state .input-field-state label {
+  color: #f978a3;
+}
+
+#contact .more-about .contact-form form .about-your-children .current-state .input-field-state input,
+#contact .more-about .contact-form form .about-your-children .current-state .input-field-state select {
+  margin: 1.5rem 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 0.3rem 0;
+  color: inherit;
+  border-bottom: 2px solid #707070;
+}
+
+#contact .more-about .contact-form form .about-your-children .current-state .input-field-state select {
+  width: 80%;
+}
+
+#contact .more-about .contact-form form .about-your-children button {
+  width: 70%;
+  border: 1px solid #707070;
+  border-radius: 10px;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#contact .more-about .contact-form form .button-confirm-interest {
+  width: 95%;
+  padding: 0.5rem 0.2rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-color: #49ced9;
+  color: #fff;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 5px #49ced9;
+          box-shadow: 0 0 5px #49ced9;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#contact .more-about .contact-form form .button-confirm-interest:hover {
+  -webkit-box-shadow: 0 0 30px #49ced9;
+          box-shadow: 0 0 30px #49ced9;
+}
+
+#contact .localization {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5rem;
+}
+
+#contact .localization .title {
+  font-size: 2.5rem;
+}
+
+#contact .localization .container-address {
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+
+#contact .localization .container-address .div-map {
+  position: relative;
+}
+
+#contact .localization .container-address .div-map .map {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 1px solid #707070;
+}
+
+#contact .localization .container-address .div-map .bolinhas {
+  position: absolute;
+  bottom: -10rem;
+  right: -10rem;
+  background-color: #fbdb6e;
+  padding: 2rem;
+  padding-top: 5rem;
+  border-radius: 20px;
+  z-index: -1;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+#contact .localization .container-address .address-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+#contact .localization .container-address .address-line span {
+  margin-left: 0.5rem;
+}
+
+#contact .svgs {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -5rem;
+  overflow-x: hidden;
+}
+
+#contact .svgs .slatted-circle-1 {
+  position: absolute;
+  z-index: 1;
+  top: -15rem;
+  right: -27rem;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+#contact .svgs .slatted-circle-2 {
+  position: absolute;
+  z-index: 1;
+  bottom: -5rem;
+  left: -30rem;
+  -webkit-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+#contact .svgs .line-yellow {
+  position: absolute;
+  width: 100%;
+  left: -3rem;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+#contact .svgs .line-pink {
+  position: absolute;
+  width: 100%;
+  left: -3rem;
+  top: 10rem;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 * {

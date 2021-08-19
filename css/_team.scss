@@ -10,10 +10,10 @@
         font-size: 2rem;
         font-weight: 400;
     }
-    .title-1{
+    .title-1 {
         margin: 3rem 0;
     }
-    .title-2{
+    .title-2 {
         margin: 6rem 0;
     }
 
@@ -82,8 +82,7 @@
 
         .school-team {
             display: flex;
-            max-width: 90%;
-            margin-left: 0rem;
+            max-width: 100%;
             align-self: flex-end;
             overflow-x: scroll;
             padding-bottom: 2rem;
@@ -109,6 +108,10 @@
                     border-radius: 30px;
                     object-fit: cover;
                     object-position: bottom;
+                }
+
+                &:nth-child(1) {
+                    margin-left: 10rem;
                 }
             }
         }
