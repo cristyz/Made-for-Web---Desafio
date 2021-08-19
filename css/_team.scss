@@ -1,0 +1,155 @@
+#team {
+    min-height: 200vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    color: #737373;
+
+    .title {
+        font-size: 2rem;
+        font-weight: 400;
+    }
+    .title-1{
+        margin: 3rem 0;
+    }
+    .title-2{
+        margin: 6rem 0;
+    }
+
+    .speak-with-our-team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #49ced9;
+        justify-content: center;
+        width: 75%;
+        height: 300px;
+        border-radius: 30px;
+        position: relative;
+
+        .div-balls {
+            position: absolute;
+            left: -6rem;
+            z-index: -1;
+            bottom: -10rem;
+            width: 300px;
+            height: 300px;
+            background-color: #fbdb6e;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg {
+                margin-top: 3rem;
+            }
+        }
+        h1,
+        h3,
+        button {
+            color: #fff;
+            font-weight: 400;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            margin: 2rem 0;
+        }
+        button {
+            padding: 1rem 2.5rem;
+            font-size: 2rem;
+            background-color: #fc4c86;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            box-shadow: 3px 3px 10px #fc4c86;
+            transition: 0.4s linear;
+            &:hover {
+                box-shadow: 0 0 30px #fc4c86;
+            }
+        }
+    }
+
+    .container-peoples {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 15rem;
+        width: 100%;
+        overflow: hidden;
+
+        .school-team {
+            display: flex;
+            max-width: 90%;
+            margin-left: 0rem;
+            align-self: flex-end;
+            overflow-x: scroll;
+            padding-bottom: 2rem;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+
+            .card {
+                display: flex;
+                width: 300px;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-right: 5rem;
+                h3 {
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.6rem;
+                }
+                img {
+                    width: 280px;
+                    height: 280px;
+                    border-radius: 30px;
+                    object-fit: cover;
+                    object-position: bottom;
+                }
+            }
+        }
+    }
+    .container-depositions {
+        display: flex;
+        width: 85%;
+        justify-content: space-between;
+
+        .card {
+            width: 30%;
+            display: flex;
+            &:nth-child(1) {
+                img {
+                    object-position: left;
+                }
+            }
+            &:nth-child(3) {
+                img {
+                    object-position: -20px;
+                }
+            }
+            p {
+                margin-left: 1rem;
+            }
+            figure {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 100px;
+                    height: 100px;
+                    object-fit: cover;
+                    box-shadow: 3px 3px 10px #a1a1a1;
+                    border-radius: 30px;
+                }
+                span {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
