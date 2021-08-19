@@ -67,4 +67,35 @@ $text-color-dark: #484847;
             }
         }
     }
+
+    @media screen and (max-width: 768px) {
+        .our-skills {
+            flex-direction: column;
+            margin-top: 0;
+            .card-skill {
+                width: 100%;
+                margin-top: 4rem;
+            }
+        }
+        .card-pride {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            .icon{
+                h1{
+                    display: none;
+                }
+                img{
+                    width: 70%;
+                }
+            }
+            .school-description {
+                display: flex;
+                text-align: center;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+        }
+    }
 }

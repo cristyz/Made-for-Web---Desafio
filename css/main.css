@@ -477,6 +477,50 @@
   opacity: 0.9;
 }
 
+@media screen and (max-width: 768px) {
+  #methodology .our-skills {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+  #methodology .our-skills .card-skill {
+    width: 100%;
+    margin-top: 4rem;
+  }
+  #methodology .card-pride {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  #methodology .card-pride .icon h1 {
+    display: none;
+  }
+  #methodology .card-pride .icon img {
+    width: 70%;
+  }
+  #methodology .card-pride .school-description {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
 #learning-progress {
   position: relative;
   min-height: 100vh;
