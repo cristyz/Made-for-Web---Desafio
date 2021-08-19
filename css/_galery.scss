@@ -7,7 +7,8 @@ $text-color-dark: #484847;
     padding-top: 3rem;
     align-items: center;
     min-height: 100vh;
-    // overflow: hidden;
+    // Enquando é feito o responsivo
+    display: none;
     .title {
         font-size: 2.3em;
         font-weight: 400;

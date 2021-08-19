@@ -9,6 +9,9 @@ $line-color: #d1d1d1;
     color: $text-color-dark;
     overflow: hidden;
 
+    // Enquando é feito o responsivo
+    display: none;
+
     &:before {
         content: "";
         position: absolute;

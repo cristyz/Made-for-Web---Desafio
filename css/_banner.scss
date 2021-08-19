@@ -199,3 +199,59 @@ $text-color-dark: #484847;
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    #banner {
+        padding-bottom: 3rem;
+        .img-initial,
+        #span-circle,
+        .svg-multiple-1,
+        .svg-atomo-2,
+        .svg-pen-2,
+        .svg-division-2 {
+            display: none;
+        }
+        .svg-atomo-1 {
+            width: 80px;
+            top: 0;
+        }
+
+        .svg-bag-1 {
+            top: 1rem;
+            right: 3rem;
+            width: 100px;
+        }
+        .svg-pen-1 {
+            --top-start: 55%;
+            --top-end: 60%;
+            width: 50px;
+            left: 85%;
+        }
+
+        .svg-multiple-2 {
+            --left-start: 85%;
+            --left-end: 90%;
+            top: 70%;
+        }
+        .svg-division-1 {
+            top: 70%;
+            width: 50px;
+        }
+
+        .div-texts {
+            margin-left: 3rem;
+            width: 70%;
+            h1{
+                font-size: 2.5rem;
+            }
+            p {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+            button{
+                margin-top: 2rem;
+                width: 70%;
+            }
+        }
+    }
+}
