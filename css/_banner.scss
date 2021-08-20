@@ -174,16 +174,17 @@ $text-color-dark: #484847;
         flex-direction: column;
         h1 {
             font-weight: 400;
-            font-size: 2rem;
+            font-size: 2.5vw;
             margin-bottom: 1rem;
         }
         p {
+            font-size: 1.3vw;
             margin-bottom: 0.5rem;
         }
         button {
             align-self: center;
             margin-top: 1rem;
-            padding: 15px 25px;
+            padding: 20px 30px;
             border-radius: 30px;
             background-color: #f8f47c;
             border: none;
@@ -239,16 +240,17 @@ $text-color-dark: #484847;
         }
 
         .div-texts {
+            margin-top: 1rem;
             margin-left: 3rem;
             width: 70%;
-            h1{
+            h1 {
                 font-size: 2.5rem;
             }
             p {
                 font-size: 1.2rem;
                 margin: 0;
             }
-            button{
+            button {
                 margin-top: 2rem;
                 width: 70%;
             }

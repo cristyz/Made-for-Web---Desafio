@@ -9,16 +9,16 @@ $line-color: #d1d1d1;
     display: grid;
     margin-top: 5rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 300px);
+    grid-template-rows: repeat(5, 400px);
     &::before {
         content: "";
         position: absolute;
         height: 100%;
-        width: 120%;
-        left: 50%;
+        width: 100%;
+        left: 65%;
         bottom: 3rem;
         background-color: #fafafa;
-        transform: skewX(-40deg);
+        transform: skewX(-40deg) scaleX(1.5);
         z-index: -1;
     }
     &::after {
@@ -104,8 +104,8 @@ $line-color: #d1d1d1;
         right: 1rem;
         bottom: 1rem;
         padding: 0.8rem 1.5rem;
-        font-size: 1rem;
-        font-weight: 400;
+        font-size: 1.3rem;
+        font-weight: 600;
         border: none;
         border-radius: 15px;
         letter-spacing: 1px;
@@ -156,7 +156,7 @@ $line-color: #d1d1d1;
             position: absolute;
             width: 15px;
             height: 15px;
-            top: 9.6%;
+            top: 9.7%;
             left: 49.5%;
             background-color: #d1d1d1;
             border-radius: 50%;
@@ -175,7 +175,7 @@ $line-color: #d1d1d1;
             position: absolute;
             width: 15px;
             height: 15px;
-            top: 49.6%;
+            top: 49.7%;
             left: 49.5%;
             background-color: #d1d1d1;
             border-radius: 50%;
@@ -195,7 +195,7 @@ $line-color: #d1d1d1;
             position: absolute;
             width: 15px;
             height: 15px;
-            top: 29.6%;
+            top: 29.7%;
             left: 49.5%;
             background-color: #d1d1d1;
             border-radius: 50%;
@@ -214,7 +214,7 @@ $line-color: #d1d1d1;
             position: absolute;
             width: 15px;
             height: 15px;
-            top: 69.6%;
+            top: 69.7%;
             left: 49.5%;
             background-color: #d1d1d1;
             border-radius: 50%;
@@ -237,7 +237,7 @@ $line-color: #d1d1d1;
 
         .gray-balls-1 {
             position: absolute;
-            top: 85%;
+            bottom: 6rem;
             left: 35%;
             width: 200px;
             transform: rotateZ(90deg);
@@ -246,13 +246,22 @@ $line-color: #d1d1d1;
             position: absolute;
             top: 10%;
             right: 0;
-            width: 150px;
+            width: 200px;
+            opacity: .9;
         }
 
         .line-blue,
         .line-pink {
             display: none;
         }
+    }
+
+    .figure-left{
+        width: 80%;
+    }
+    .figure-right{
+        width: 80%;
+        margin-left: 5rem;
     }
 }
 
@@ -268,6 +277,10 @@ $line-color: #d1d1d1;
         .title {
             grid-column: 1;
             grid-row: 1;
+            h1{
+                width: 80%;
+                text-align: center;
+            }
         }
 
         .infantil-figure {
@@ -391,8 +404,11 @@ $line-color: #d1d1d1;
                 left: -2rem;
                 top: 65%;
             }
+            .slatted-circle-1 {
+                top: 18%;
+            }
             .slatted-circle-2 {
-                left: 87%;
+                left: 82%;
                 top: 35%;
             }
 
