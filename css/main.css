@@ -524,28 +524,18 @@
 #learning-progress {
   position: relative;
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10rem;
   color: #484847;
   overflow: hidden;
-  display: none;
+  display: -ms-grid;
+  display: grid;
+  margin-top: 5rem;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: (300px)[5];
+      grid-template-rows: repeat(5, 300px);
 }
 
-#learning-progress:before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  height: 80%;
-  width: 3px;
-  background-color: #d1d1d1;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border-radius: 10px;
-}
-
-#learning-progress:after {
+#learning-progress::before {
   content: "";
   position: absolute;
   height: 100%;
@@ -558,92 +548,121 @@
   z-index: -1;
 }
 
-#learning-progress .div-left,
-#learning-progress .div-right {
-  position: relative;
-  width: 50%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (350px)[5];
-      grid-template-rows: repeat(5, 350px);
+#learning-progress::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  height: 80%;
+  width: 3px;
+  background-color: #d1d1d1;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 10px;
 }
 
-#learning-progress .figure-left:before {
-  left: 100%;
+#learning-progress .title {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-#learning-progress .figure-left::after {
-  left: 125%;
-}
-
-#learning-progress .figure-right:before {
-  left: 0%;
-}
-
-#learning-progress .figure-right::after {
-  left: -25%;
-}
-
-#learning-progress .card h3 {
-  margin: 1rem 0;
-  font-size: 2rem;
+#learning-progress .title h1 {
+  width: 70%;
+  font-size: 2.1rem;
   font-weight: 400;
 }
 
-#learning-progress .card p {
-  width: 80%;
-}
-
-#learning-progress .card figure {
+#learning-progress .infantil-figure {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
   position: relative;
-  width: 80%;
+  margin-left: 5rem;
+  margin-right: 10rem;
 }
 
-#learning-progress .card figure:before {
-  content: "";
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 50%;
-  top: 50%;
-  height: 1px;
-  background-color: #d1d1d1;
+#learning-progress .infantil-texts {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
-#learning-progress .card figure::after {
-  content: "";
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  top: 50%;
-  border-radius: 50%;
-  height: 15px;
-  width: 15px;
-  background-color: #d1d1d1;
+#learning-progress .fundamental-1-figure {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  position: relative;
+  margin-right: 5rem;
+  margin-left: 10rem;
 }
 
-#learning-progress .card figure img {
+#learning-progress .fundamental-1-texts {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+#learning-progress .fundamental-2-figure {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  position: relative;
+  margin-left: 5rem;
+  margin-right: 10rem;
+}
+
+#learning-progress .fundamental-2-texts {
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+#learning-progress .medio-figure {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  position: relative;
+  margin-right: 5rem;
+  margin-left: 10rem;
+}
+
+#learning-progress .medio-texts {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 5;
+  grid-row: 5;
+}
+
+#learning-progress .img-learning-progress {
   width: 100%;
-  min-width: 100%;
-  height: 55%;
-  min-height: 350px;
-  border-radius: 10px;
-  -webkit-box-shadow: 1px 1px 5px #ccc;
-          box-shadow: 1px 1px 5px #ccc;
-  position: relative;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 100%;
+  border-radius: 20px;
 }
 
-#learning-progress .card figure button {
+#learning-progress .button-learning-progress {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
   padding: 0.8rem 1.5rem;
   font-size: 1rem;
+  font-weight: 400;
   border: none;
   border-radius: 15px;
-  font-weight: 600;
   letter-spacing: 1px;
   background-color: #fbdb6e;
   cursor: pointer;
@@ -653,100 +672,353 @@
   transition: 0.2s ease-in-out;
 }
 
-#learning-progress .card figure button:hover {
+#learning-progress .button-learning-progress:hover {
   -webkit-box-shadow: 1px 1px 5px #484847;
           box-shadow: 1px 1px 5px #484847;
 }
 
-#learning-progress .card-left {
-  margin-left: 3rem;
-}
-
-#learning-progress .card-right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin-right: 3rem;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-#learning-progress .card-right h3 {
-  width: 80%;
-}
-
-#learning-progress .infantil-card {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  grid-row: 1 / 3;
-}
-
-#learning-progress .fundamental-1-card {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 2;
-  grid-row: 2 / 4;
-}
-
-#learning-progress .fundamental-2-card {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  grid-row: 3 / 6;
-}
-
-#learning-progress .medio-card {
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 2;
-  grid-row: 4 / 6;
-}
-
-#learning-progress .white-space {
-  position: relative;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#learning-progress .white-space h1 {
-  width: 65%;
-  font-weight: 400;
+#learning-progress .div-texts h3 {
+  margin: 1rem 0;
   font-size: 2rem;
+  font-weight: 400;
 }
 
-#learning-progress .white-space .balls-1 {
-  position: absolute;
-  right: 0;
-  bottom: 5rem;
-  width: 175px;
+#learning-progress .div-texts p {
+  width: 70%;
+  font-size: 1rem;
 }
 
-#learning-progress .white-space .balls-2 {
-  position: absolute;
-  right: 1rem;
-  bottom: 5rem;
-  -webkit-transform: rotateZ(90deg) scale(0.8);
-          transform: rotateZ(90deg) scale(0.8);
+#learning-progress .div-texts-right {
+  margin-left: 10rem;
 }
 
-#learning-progress .slatted-circle-1 {
-  position: absolute;
-  left: -41rem;
-  top: 14rem;
+#learning-progress .div-texts-left {
+  margin-left: 5rem;
 }
 
-#learning-progress .slatted-circle-2 {
+#learning-progress .div-line-and-ball {
   position: absolute;
-  left: -17rem;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .line-left {
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  top: 10%;
+  left: 25%;
+  background-color: #d1d1d1;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .ball-left {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 9.6%;
+  left: 49.5%;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .line-left-2 {
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  top: 50%;
+  left: 25%;
+  background-color: #d1d1d1;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .ball-left-2 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 49.6%;
+  left: 49.5%;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .line-right {
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  top: 30%;
+  left: 50%;
+  background-color: #d1d1d1;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .ball-right {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 29.6%;
+  left: 49.5%;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .line-right-2 {
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  top: 70%;
+  left: 50%;
+  background-color: #d1d1d1;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .ball-right-2 {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 69.6%;
+  left: 49.5%;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+#learning-progress .div-line-and-ball .slatted-circle-1 {
+  position: absolute;
+  top: 10%;
+  left: -390px;
+  z-index: -1;
   width: 500px;
-  bottom: 0;
+}
+
+#learning-progress .div-line-and-ball .slatted-circle-2 {
+  position: absolute;
+  top: 60%;
+  left: -200px;
+  width: 400px;
+}
+
+#learning-progress .div-line-and-ball .gray-balls-1 {
+  position: absolute;
+  top: 85%;
+  left: 35%;
+  width: 200px;
+  -webkit-transform: rotateZ(90deg);
+          transform: rotateZ(90deg);
+}
+
+#learning-progress .div-line-and-ball .gray-balls-2 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  width: 150px;
+}
+
+#learning-progress .div-line-and-ball .line-blue,
+#learning-progress .div-line-and-ball .line-pink {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+  #learning-progress {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 350px 400px 350px 400px 350px 400px 350px 400px 350px 400px;
+        grid-template-rows: 350px 400px 350px 400px 350px 400px 350px 400px 350px 400px;
+  }
+  #learning-progress::after {
+    z-index: -1;
+    top: 7.5%;
+  }
+  #learning-progress .title {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #learning-progress .infantil-figure {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  #learning-progress .infantil-texts {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  #learning-progress .fundamental-1-figure {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 4;
+    grid-row: 4;
+  }
+  #learning-progress .fundamental-1-texts {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 5;
+    grid-row: 5;
+  }
+  #learning-progress .fundamental-2-figure {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 6;
+    grid-row: 6;
+  }
+  #learning-progress .fundamental-2-texts {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 7;
+    grid-row: 7;
+  }
+  #learning-progress .medio-figure {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 8;
+    grid-row: 8;
+  }
+  #learning-progress .medio-texts {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 9;
+    grid-row: 9;
+  }
+  #learning-progress .div-texts {
+    background-color: #fff;
+  }
+  #learning-progress .div-texts-right {
+    width: 70%;
+    height: 50%;
+    margin: 0;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+  }
+  #learning-progress .div-texts-right h3 {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  #learning-progress .div-texts-right p {
+    margin-left: 1rem;
+    width: 95%;
+  }
+  #learning-progress .div-texts-left {
+    width: 70%;
+    height: 50%;
+    margin: 0;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+  }
+  #learning-progress .div-texts-left h3 {
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+  #learning-progress .div-texts-left p {
+    margin-left: 1rem;
+    width: 95%;
+  }
+  #learning-progress .figure-left,
+  #learning-progress .figure-right {
+    margin: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #learning-progress .figure-left img,
+  #learning-progress .figure-right img {
+    width: 70%;
+    -webkit-box-shadow: 3px -1px 10px rgba(0, 0, 0, 0.404);
+            box-shadow: 3px -1px 10px rgba(0, 0, 0, 0.404);
+    border-radius: 0;
+  }
+  #learning-progress .figure-left button,
+  #learning-progress .figure-right button {
+    right: 17%;
+  }
+  #learning-progress .figure-left::after,
+  #learning-progress .figure-right::after {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    top: -5rem;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+  }
+  #learning-progress .figure-last::before {
+    z-index: 10;
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    bottom: -73%;
+    border-radius: 50%;
+    background-color: #d1d1d1;
+  }
+  #learning-progress .div-line-and-ball .ball-left,
+  #learning-progress .div-line-and-ball .ball-left-2,
+  #learning-progress .div-line-and-ball .ball-right,
+  #learning-progress .div-line-and-ball .ball-right-2 {
+    display: none;
+  }
+  #learning-progress .div-line-and-ball .gray-balls-1 {
+    left: -2rem;
+    top: 65%;
+  }
+  #learning-progress .div-line-and-ball .slatted-circle-2 {
+    left: 87%;
+    top: 35%;
+  }
+  #learning-progress .div-line-and-ball .line-blue {
+    display: block;
+    position: absolute;
+    left: -70%;
+  }
+  #learning-progress .div-line-and-ball .line-pink {
+    display: block;
+    position: absolute;
+    left: -70%;
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #learning-progress .figure-left,
+  #learning-progress .figure-right {
+    position: relative;
+  }
+  #learning-progress .figure-left img,
+  #learning-progress .figure-right img {
+    width: 95%;
+  }
+  #learning-progress .div-texts {
+    width: 95%;
+    height: 60%;
+  }
+  #learning-progress .div-texts p {
+    font-size: 0.85rem;
+  }
+  #learning-progress .div-line-and-ball .ball-left,
+  #learning-progress .div-line-and-ball .ball-left-2,
+  #learning-progress .div-line-and-ball .ball-right,
+  #learning-progress .div-line-and-ball .ball-right-2 {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    left: 48.1%;
+  }
 }
 
 #galery {
@@ -763,7 +1035,6 @@
       -ms-flex-align: center;
           align-items: center;
   min-height: 100vh;
-  display: none;
 }
 
 #galery .title {

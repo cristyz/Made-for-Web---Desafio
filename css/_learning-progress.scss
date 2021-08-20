@@ -4,25 +4,13 @@ $line-color: #d1d1d1;
 #learning-progress {
     position: relative;
     min-height: 100vh;
-    display: flex;
-    margin-top: 10rem;
     color: $text-color-dark;
     overflow: hidden;
-
-    // Enquando é feito o responsivo
-    display: none;
-
-    &:before {
-        content: "";
-        position: absolute;
-        left: 50%;
-        height: 80%;
-        width: 3px;
-        background-color: $line-color;
-        transform: translateX(-50%);
-        border-radius: 10px;
-    }
-    &:after {
+    display: grid;
+    margin-top: 5rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 300px);
+    &::before {
         content: "";
         position: absolute;
         height: 100%;
@@ -33,154 +21,421 @@ $line-color: #d1d1d1;
         transform: skewX(-40deg);
         z-index: -1;
     }
-    .div-left,
-    .div-right {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        height: 80%;
+        width: 3px;
+        background-color: $line-color;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+
+    .title {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        h1 {
+            width: 70%;
+            font-size: 2.1rem;
+            font-weight: 400;
+        }
+    }
+
+    .infantil-figure {
+        grid-column: 1;
+        grid-row: 1;
         position: relative;
-        width: 50%;
-        display: grid;
-        grid-template-rows: repeat(5, 350px);
+        margin-left: 5rem;
+        margin-right: 10rem;
+    }
+    .infantil-texts {
+        grid-column: 1;
+        grid-row: 2;
     }
 
-    .figure-left {
-        &:before {
-            left: 100%;
-        }
-        &::after {
-            left: 125%;
-        }
+    .fundamental-1-figure {
+        grid-column: 2;
+        grid-row: 2;
+        position: relative;
+        margin-right: 5rem;
+        margin-left: 10rem;
     }
-    .figure-right {
-        &:before {
-            left: 0%;
-        }
-        &::after {
-            left: -25%;
+    .fundamental-1-texts {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    .fundamental-2-figure {
+        grid-column: 1;
+        grid-row: 3;
+        position: relative;
+        margin-left: 5rem;
+        margin-right: 10rem;
+    }
+    .fundamental-2-texts {
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .medio-figure {
+        grid-column: 2;
+        grid-row: 4;
+        position: relative;
+        margin-right: 5rem;
+        margin-left: 10rem;
+    }
+    .medio-texts {
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    .img-learning-progress {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+
+    .button-learning-progress {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        font-weight: 400;
+        border: none;
+        border-radius: 15px;
+        letter-spacing: 1px;
+        background-color: #fbdb6e;
+        cursor: pointer;
+        box-shadow: 3px 3px 10px $text-color-dark;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            box-shadow: 1px 1px 5px $text-color-dark;
         }
     }
 
-    .card {
+    .div-texts {
         h3 {
             margin: 1rem 0;
             font-size: 2rem;
             font-weight: 400;
         }
         p {
-            width: 80%;
+            width: 70%;
+            font-size: 1rem;
         }
-        figure {
-            position: relative;
-            width: 80%;
+    }
 
-            &:before {
-                content: "";
-                position: absolute;
-                transform: translate(-50%, -50%);
-                width: 50%;
-                top: 50%;
-                height: 1px;
-                background-color: $line-color;
-            }
-            &::after {
-                content: "";
-                position: absolute;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                border-radius: 50%;
-                height: 15px;
-                width: 15px;
-                background-color: $line-color;
-            }
+    .div-texts-right {
+        margin-left: 10rem;
+    }
+    .div-texts-left {
+        margin-left: 5rem;
+    }
 
+    .div-line-and-ball {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        // Left
+        .line-left {
+            position: absolute;
+            width: 25%;
+            height: 3px;
+            top: 10%;
+            left: 25%;
+            background-color: #d1d1d1;
+            z-index: -1;
+        }
+        .ball-left {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 9.6%;
+            left: 49.5%;
+            background-color: #d1d1d1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .line-left-2 {
+            position: absolute;
+            width: 25%;
+            height: 3px;
+            top: 50%;
+            left: 25%;
+            background-color: #d1d1d1;
+            z-index: -1;
+        }
+        .ball-left-2 {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 49.6%;
+            left: 49.5%;
+            background-color: #d1d1d1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        // Right
+        .line-right {
+            position: absolute;
+            width: 25%;
+            height: 3px;
+            top: 30%;
+            left: 50%;
+            background-color: #d1d1d1;
+            z-index: -1;
+        }
+        .ball-right {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 29.6%;
+            left: 49.5%;
+            background-color: #d1d1d1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+        .line-right-2 {
+            position: absolute;
+            width: 25%;
+            height: 3px;
+            top: 70%;
+            left: 50%;
+            background-color: #d1d1d1;
+            z-index: -1;
+        }
+        .ball-right-2 {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            top: 69.6%;
+            left: 49.5%;
+            background-color: #d1d1d1;
+            border-radius: 50%;
+            z-index: -1;
+        }
+
+        .slatted-circle-1 {
+            position: absolute;
+            top: 10%;
+            left: -390px;
+            z-index: -1;
+            width: 500px;
+        }
+        .slatted-circle-2 {
+            position: absolute;
+            top: 60%;
+            left: -200px;
+            width: 400px;
+        }
+
+        .gray-balls-1 {
+            position: absolute;
+            top: 85%;
+            left: 35%;
+            width: 200px;
+            transform: rotateZ(90deg);
+        }
+        .gray-balls-2 {
+            position: absolute;
+            top: 10%;
+            right: 0;
+            width: 150px;
+        }
+
+        .line-blue,
+        .line-pink {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #learning-progress {
+        grid-template-columns: 1fr;
+        grid-template-rows: 350px 400px 350px 400px 350px 400px 350px 400px 350px 400px;
+        &::after {
+            z-index: -1;
+            top: 7.5%;
+        }
+
+        .title {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .infantil-figure {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .infantil-texts {
+            grid-column: 1;
+            grid-row: 3;
+        }
+
+        .fundamental-1-figure {
+            grid-column: 1;
+            grid-row: 4;
+        }
+        .fundamental-1-texts {
+            grid-column: 1;
+            grid-row: 5;
+        }
+
+        .fundamental-2-figure {
+            grid-column: 1;
+            grid-row: 6;
+        }
+        .fundamental-2-texts {
+            grid-column: 1;
+            grid-row: 7;
+        }
+
+        .medio-figure {
+            grid-column: 1;
+            grid-row: 8;
+        }
+        .medio-texts {
+            grid-column: 1;
+            grid-row: 9;
+        }
+
+        .div-texts {
+            background-color: #fff;
+        }
+
+        .div-texts-right {
+            width: 70%;
+            height: 50%;
+            margin: 0;
+            justify-self: center;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+            h3 {
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+            p {
+                margin-left: 1rem;
+                width: 95%;
+            }
+        }
+        .div-texts-left {
+            width: 70%;
+            height: 50%;
+            margin: 0;
+            justify-self: center;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.418);
+            h3 {
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+            p {
+                margin-left: 1rem;
+                width: 95%;
+            }
+        }
+
+        .figure-left,
+        .figure-right {
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
             img {
-                width: 100%;
-                min-width: 100%;
-                height: 55%;
-                min-height: 350px;
-                border-radius: 10px;
-                box-shadow: 1px 1px 5px #ccc;
-                position: relative;
-                object-fit: cover;
+                width: 70%;
+                box-shadow: 3px -1px 10px rgba(0, 0, 0, 0.404);
+                border-radius: 0;
             }
             button {
+                right: 17%;
+            }
+
+            &::after {
+                z-index: 10;
+                content: "";
                 position: absolute;
-                right: 1rem;
-                bottom: 1rem;
-                padding: 0.8rem 1.5rem;
-                font-size: 1rem;
-                border: none;
-                border-radius: 15px;
-                font-weight: 600;
-                letter-spacing: 1px;
-                background-color: #fbdb6e;
-                cursor: pointer;
-                box-shadow: 3px 3px 10px $text-color-dark;
-                transition: 0.2s ease-in-out;
-                &:hover {
-                    box-shadow: 1px 1px 5px $text-color-dark;
-                }
+                width: 23px;
+                height: 23px;
+                top: -5rem;
+                border-radius: 50%;
+                background-color: #d1d1d1;
+            }
+        }
+        .figure-last {
+            &::before {
+                z-index: 10;
+                content: "";
+                position: absolute;
+                width: 23px;
+                height: 23px;
+                bottom: -73%;
+                border-radius: 50%;
+                background-color: #d1d1d1;
+            }
+        }
+
+        .div-line-and-ball {
+            .ball-left,
+            .ball-left-2,
+            .ball-right,
+            .ball-right-2 {
+                display: none;
+            }
+            .gray-balls-1 {
+                left: -2rem;
+                top: 65%;
+            }
+            .slatted-circle-2 {
+                left: 87%;
+                top: 35%;
+            }
+
+            .line-blue {
+                display: block;
+                position: absolute;
+                left: -70%;
+            }
+            .line-pink{
+                display: block;
+                position: absolute;
+                left: -70%;
+                top: 60%;
             }
         }
     }
+}
 
-    .card-left {
-        margin-left: 3rem;
-    }
-    .card-right {
-        display: flex;
-        flex-direction: column;
-        margin-right: 3rem;
-        align-items: flex-end;
-        h3 {
-            width: 80%;
+@media screen and (max-width: 650px) {
+    #learning-progress {
+        .figure-left,
+        .figure-right {
+            position: relative;
+            img {
+                width: 95%;
+            }
         }
-    }
+        .div-texts {
+            width: 95%;
+            height: 60%;
+            p {
+                font-size: 0.85rem;
+            }
+        }
 
-    .infantil-card {
-        grid-row: 1 / 3;
-    }
-    .fundamental-1-card {
-        grid-row: 2 / 4;
-    }
-    .fundamental-2-card {
-        grid-row: 3 / 6;
-    }
-    .medio-card {
-        grid-row: 4 / 6;
-    }
-
-    .white-space {
-        position: relative;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        h1 {
-            width: 65%;
-            font-weight: 400;
-            font-size: 2rem;
+        .div-line-and-ball {
+            .ball-left,
+            .ball-left-2,
+            .ball-right,
+            .ball-right-2 {
+                transform: scale(1.6);
+                left: 48.1%;
+            }
         }
-        .balls-1 {
-            position: absolute;
-            right: 0;
-            bottom: 5rem;
-            width: 175px;
-        }
-        .balls-2 {
-            position: absolute;
-            right: 1rem;
-            bottom: 5rem;
-            transform: rotateZ(90deg) scale(0.8);
-        }
-    }
-
-    .slatted-circle-1 {
-        position: absolute;
-        left: -41rem;
-        top: 14rem;
-    }
-    .slatted-circle-2 {
-        position: absolute;
-        left: -17rem;
-        width: 500px;
-        bottom: 0;
     }
 }
