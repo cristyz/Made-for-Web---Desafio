@@ -250,6 +250,7 @@
 @media screen and (max-width: 768px) {
     #contact {
         padding: unset;
+        min-height: unset;
         .svgs {
             // display: none;
             .line-yellow,.line-pink,.slatted-circle-1{
@@ -258,7 +259,7 @@
             .slatted-circle-2{
                 left: unset;
                 right: -14rem;
-                bottom: 7rem;
+                bottom: 11rem;
                 width: 500px;
                 z-index: -1;
             }
@@ -331,6 +332,7 @@
 
         .localization {
             margin-top: 5rem;
+            min-height: unset;
             .container-address {
                 width: 100%;
                 margin-top: 2.5rem;

@@ -1907,6 +1907,7 @@
 @media screen and (max-width: 768px) {
   #contact {
     padding: unset;
+    min-height: unset;
   }
   #contact .svgs .line-yellow, #contact .svgs .line-pink, #contact .svgs .slatted-circle-1 {
     display: none;
@@ -1914,7 +1915,7 @@
   #contact .svgs .slatted-circle-2 {
     left: unset;
     right: -14rem;
-    bottom: 7rem;
+    bottom: 11rem;
     width: 500px;
     z-index: -1;
   }
@@ -1984,6 +1985,7 @@
   }
   #contact .localization {
     margin-top: 5rem;
+    min-height: unset;
   }
   #contact .localization .container-address {
     width: 100%;
@@ -2019,7 +2021,6 @@ footer {
       -ms-flex-align: end;
           align-items: flex-end;
   color: #fff;
-  display: none;
 }
 
 footer .background-footer {
@@ -2080,6 +2081,32 @@ footer .contact-footer span:nth-child(2) {
 footer .logo,
 footer .contact-footer {
   margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    height: 30vh;
+  }
+  footer .logo {
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  footer .logo img {
+    width: 150px;
+  }
+  footer .logo span {
+    text-align: center;
+  }
+  footer .contact-footer {
+    margin-bottom: 1.5rem;
+    margin-right: .8rem;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  footer span {
+    font-size: 3vw;
+    text-align: end;
+  }
 }
 
 * {

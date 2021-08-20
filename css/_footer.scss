@@ -5,8 +5,6 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     color: #fff;
-    // Enquando é feito o responsivo
-    display: none;
     .background-footer {
         position: absolute;
         z-index: -1;
@@ -41,5 +39,30 @@ footer {
     .logo,
     .contact-footer {
         margin-bottom: 5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    footer{
+        height: 30vh;
+        .logo{
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+            img{
+                width: 150px;
+            }
+            span{
+                text-align: center;
+            }
+        }
+        .contact-footer{
+            margin-bottom: 1.5rem;
+            margin-right: .8rem;
+            align-self: flex-end;
+        }
+        span{
+            font-size: 3vw;
+            text-align: end;
+        }
     }
 }
