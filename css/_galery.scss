@@ -82,11 +82,11 @@ $text-color-dark: #484847;
             }
             .line-yellow-2 {
                 position: absolute;
-                left: 35rem;
+                left: 65%;
                 top: 70rem;
                 z-index: -1;
                 width: 100%;
-                transform: scaleX(1.4) rotateZ(-140deg);
+                transform: scale(1.4) rotateZ(-160deg);
             }
             .line-blue {
                 position: absolute;
@@ -108,12 +108,12 @@ $text-color-dark: #484847;
             grid-gap: 0;
             width: 100%;
 
-            img{
+            img {
                 border-radius: 0;
                 box-shadow: none;
             }
 
-            .div-svgs{
+            .div-svgs {
                 .balls {
                     position: absolute;
                     right: -3rem;
@@ -124,7 +124,9 @@ $text-color-dark: #484847;
                     padding-left: 1rem;
                     border-radius: 20px;
                 }
-                .slatted-circle-1 {
+                .slatted-circle-1,
+                .slatted-circle-2,
+                .line-yellow-2 {
                     display: none;
                 }
             }
