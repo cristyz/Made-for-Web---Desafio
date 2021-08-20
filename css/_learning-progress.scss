@@ -424,7 +424,7 @@ $line-color: #d1d1d1;
             width: 95%;
             height: 60%;
             p {
-                font-size: 0.85rem;
+                font-size: 0.83rem;
             }
         }
 
@@ -437,5 +437,17 @@ $line-color: #d1d1d1;
                 left: 48.1%;
             }
         }
+    }
+}
+
+@media screen and (max-width: 290px) {
+    #learning-progress {
+        .div-texts {
+            height: 75%;
+            p {
+                font-size: 0.83rem;
+            }
+        }
+
     }
 }
